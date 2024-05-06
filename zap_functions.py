@@ -14,7 +14,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 def connection():
   # target = 'https://www.google.com'
   # Change to match the API key set in ZAP, or use None if the API key is disabled
-  apiKey = 'i769pi3kpcvb5i67vch4rjpccs'
+  apiKey = 't2r2vl7lq0qr02k4up9gpn9l3'
   # apiKey='qiiutul4utrfub1b8veqs50bk0'
 
   # By default ZAP API client will connect to port 8080
@@ -61,8 +61,8 @@ def fetch_alerts(zap):
     data = data1.drop("alert", axis = 1)
     data = data.drop_duplicates()
 
-    testing_data = pd.DataFrame(alert_list)
-    testing_data.to_csv('testing_data.csv', index=False)
+    # testing_data = pd.DataFrame(alert_list)
+    # testing_data.to_csv('testing_data.csv', index=False)
     testing_data = pd.read_csv('testing_data.csv')
     correlation_data = pd.read_csv("cwe_id_data.csv")
 
@@ -120,14 +120,20 @@ def fetch_alerts(zap):
     conf_matrix = confusion_matrix(test_Y, y_pred)
     print('Confusion Matrix:\n', conf_matrix)
 
-    
+    # 
     #pprint(correlate(correlation_data['cweid'],test['cweid']))
     output = correlate(correlation_data['cweid'],test['cweid'])
     pprint(output)
 
+    # output, count = correlate(correlation_data['cweid'], test['cweid'])
+    # json_output = {"alert_data": output, "count": count}
+    # return json.dumps(json_output)
+    
+    # return {"alert_data": output}
+
    
 
 
-zap = connection()
-attack_target("https://public-firing-range.appspot.com", zap)
-print(fetch_alerts(zap))
+# zap = connection()
+# attack_target("https://public-firing-range.appspot.com", zap)
+# print(fetch_alerts(zap))
