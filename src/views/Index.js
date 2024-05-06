@@ -272,9 +272,9 @@ const Index = (props) => {
                 <Row className="align-items-center">
                   <div className="col">
                     <h6 className="text-uppercase text-muted ls-1 mb-1">
-                      Severity Analysis
+                      OWASP TOP 10
                     </h6>
-                    <h2 className="mb-0">Threat levels</h2>
+                    <h2 className="mb-0">Threat Occurences</h2>
                   </div>
                 </Row>
               </CardHeader>

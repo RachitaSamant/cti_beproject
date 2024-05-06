@@ -1,25 +1,9 @@
-/*!
-
-=========================================================
-* Argon Dashboard React - v1.2.4
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2024 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // react component that copies the given text inside your clipboard
 import { CopyToClipboard } from "react-copy-to-clipboard";
 // reactstrap components
 import { Bar } from "react-chartjs-2";
+import * as client from "../../client.js";
 import {
   Button,
   Card,
@@ -40,12 +24,33 @@ import {
 } from "variables/charts.js";
 import Header from "components/Headers/Header.js";
 
+
 const Icons = () => {
   const [copiedText, setCopiedText] = useState();
+  const [alertReports, setAlertReports] = useState([]);
+  
+  const prepareAttack = async(target) => {
+    const attackProgress = await client.AttackTarget(target)
+    // dispatch(setModules(modules))
+    console.log("AP", attackProgress);
+    // setModuleList(modules)
+  }
+
+  const getAlertReports = async() => {
+    const attackReports = await client.getAlertReports();
+    console.log("FAR", attackReports);
+    setAlertReports(attackReports);
+  }
+
+  useEffect(() => {
+    prepareAttack("http://testphp.vulnweb.com/");
+  }, [])
+
   return (
     <>
       <Header />
       {/* Page content */}
+      <button onClick={getAlertReports}>Alert Reports</button>
       <Container className="mt--7" fluid>
         <Row className="mt-5">
           <Col xl="12">

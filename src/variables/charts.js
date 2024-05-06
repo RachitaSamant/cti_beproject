@@ -400,11 +400,11 @@ let chartExample2 = {
     },
   },
   data: {
-    labels: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: ["Insecure design", "Crytographic Failure", "Security misconfiguration", "Logging and monitoring failure", "Server side request forgery"],
     datasets: [
       {
         label: "Sales",
-        data: [25, 20, 30, 22, 17, 29],
+        data: [30, 8, 19, 11, 32],
         maxBarThickness: 50,
       },
     ],

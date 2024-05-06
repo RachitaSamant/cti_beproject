@@ -58,9 +58,8 @@ const Maps = () => {
               <Table className="align-items-center table-flush" responsive>
                 <thead className="thead-light">
                   <tr>
-                    <th scope="col">CVE ID</th>
                     <th scope="col">CWE ID</th>
-                    <th scope="col">CVSS</th>
+                    <th scope="col">CVSS score</th>
                     <th scope="col">Severity</th>
                     <th scope="col">Description</th>
                     <th scope="col" />
@@ -72,66 +71,89 @@ const Maps = () => {
                       <Media className="align-items-center">
                         <Media>
                           <span className="mb-0 text-sm">
-                            CVE - 1011
+                            CWE - 281
                           </span>
                         </Media>
                       </Media>
                     </th>
-                    <td>1011</td>
-                    <td>5</td>
+                    <td>7.4</td>
                     <td>
                       <div className="d-flex align-items-center">
-                        <span className="mr-2">40%</span>
+                        <span className="mr-2">High</span>
                         <div>
                           <Progress
                             max="100"
-                            value="60"
-                            barClassName="bg-success"
+                            value="74"
+                            barClassName="bg-danger"
                           />
                         </div>
                       </div>
                     </td>
-                    <td>this is description of the weakness in this system</td>
+                    <td>OX app suite throught 7.10.2 has Insecure Permissions</td>
                   </tr>
                   <tr>
                     <th scope="row">
                       <Media className="align-items-center">
                         <Media>
                           <span className="mb-0 text-sm">
-                            CVE - 600
+                            CWE - 693
                           </span>
                         </Media>
                       </Media>
                     </th>
-                    <td>600</td>
-                    <td>6</td>
+                    <td>5.6</td>
                     <td>
                       <div className="d-flex align-items-center">
-                        <span className="mr-2">100%</span>
+                        <span className="mr-2">Medium</span>
                         <div>
                           <Progress
                             max="100"
-                            value="100"
-                            barClassName="bg-danger"
+                            value="56"
+                            barClassName="bg-info"
                           />
                         </div>
                       </div>
                     </td>
-                    <td> This description of that alerts</td>
+                    <td> A vulnerability in secure socket layer (SSL)/ transpoer layer security(TLS) protocol.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <Media className="align-items-center"> 
+                        <Media>
+                          <span className="mb-0 text-sm">
+                            CWE- 190
+                          </span>
+                        </Media>
+                      </Media>
+                    </th>
+                    <td>3.9</td>
+                    <td>
+                      <div className="d-flex align-items-center">
+                        <span className="mr-2">Low</span>
+                        <div>
+                          <Progress
+                            max="100"
+                            value="39"
+                            barClassName="bg-success"
+                          />
+                        </div>
+                      </div>
+                    </td>
+                    <td>Multiple integer overflows in libwebp aloows attackers to have unspecified impact via unknown vectors</td>
                   </tr>
                   <tr>
                     <th scope="row">
                       <Media className="align-items-center">
                         <Media>
-                          <span className="mb-0 text-sm">CVE- 678</span>
+                          <span className="mb-0 text-sm">CWE- 1021</span>
                         </Media>
                       </Media>
                     </th>
-                    <td>459</td>
-                    <td>10</td>
+                    <td>4.8</td>
                     <td>
                       <div className="d-flex align-items-center">
-                        <span className="mr-2">72%</span>
+                        <span className="mr-2">Medium</span>
                         <div>
                           <Progress
                             max="100"
@@ -141,59 +163,32 @@ const Maps = () => {
                         </div>
                       </div>
                     </td>
-                    <td> This is description of alerts</td>
+                    <td>ismartgate PRO 1.5.9 is vulnerable to clickjacking</td>
                   </tr>
                   <tr>
                     <th scope="row">
                       <Media className="align-items-center"> 
                         <Media>
                           <span className="mb-0 text-sm">
-                            CVE- 1034
+                            CWE- 823
                           </span>
                         </Media>
                       </Media>
                     </th>
-                    <td>345</td>
-                    <td>8</td>
+                    <td>6.1</td>
                     <td>
                       <div className="d-flex align-items-center">
-                        <span className="mr-2">30%</span>
+                        <span className="mr-2">High</span>
                         <div>
                           <Progress
                             max="100"
-                            value="90"
-                            barClassName="bg-success"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                    <td>This is alert description</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <Media className="align-items-center"> 
-                        <Media>
-                          <span className="mb-0 text-sm">
-                            CVE- 370
-                          </span>
-                        </Media>
-                      </Media>
-                    </th>
-                    <td>156</td>
-                    <td>6</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">100%</span>
-                        <div>
-                          <Progress
-                            max="100"
-                            value="100"
+                            value="61"
                             barClassName="bg-danger"
                           />
                         </div>
                       </div>
                     </td>
-                    <td>This is description of alert</td>
+                    <td>A vulnerability has been identified in Capital VSTAR</td>
                   </tr>
                 </tbody>
               </Table>
